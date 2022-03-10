@@ -26,7 +26,7 @@ declare namespace WechatMiniprogram.Behavior {
         TData extends DataOption,
         TProperty extends PropertyOption,
         TMethod extends MethodOption,
-        TCustomInstanceProperty extends IAnyObject = Record<string, never>
+        TCustomInstanceProperty extends IAnyObject = Record<string, any>
     > = Component.Instance<TData, TProperty, TMethod, TCustomInstanceProperty>
     type TrivialInstance = Instance<IAnyObject, IAnyObject, IAnyObject>
     type TrivialOption = Options<IAnyObject, IAnyObject, IAnyObject>
@@ -34,7 +34,7 @@ declare namespace WechatMiniprogram.Behavior {
         TData extends DataOption,
         TProperty extends PropertyOption,
         TMethod extends MethodOption,
-        TCustomInstanceProperty extends IAnyObject = Record<string, never>
+        TCustomInstanceProperty extends IAnyObject = Record<string, any>
     > = Partial<Data<TData>> &
         Partial<Property<TProperty>> &
         Partial<Method<TMethod>> &
@@ -46,7 +46,7 @@ declare namespace WechatMiniprogram.Behavior {
             TData extends DataOption,
             TProperty extends PropertyOption,
             TMethod extends MethodOption,
-            TCustomInstanceProperty extends IAnyObject = Record<string, never>
+            TCustomInstanceProperty extends IAnyObject = Record<string, any>
         >(
             options: Options<TData, TProperty, TMethod, TCustomInstanceProperty>
         ): BehaviorIdentifier
